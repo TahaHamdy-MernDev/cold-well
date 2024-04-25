@@ -21,10 +21,9 @@ const {
 global.__basedir = path.resolve(__dirname, '..');
 const session = require("express-session");
 //template engine
-app.set("view engine", "ejs");
-app.set('views', path.join(__dirname, '../views'));
+
 app.use(require("../utils/response/responseHandler"));
-// 
+
 app.use(cors(corsOptions));
 
 app.use(logger("dev"));
