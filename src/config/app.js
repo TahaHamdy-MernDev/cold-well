@@ -37,13 +37,13 @@ app.use(express.urlencoded({ extended: false, limit: "30mb" }));
 app.use(mongoSanitize(mongoSanitizeOptions));
 // app.use(helmet(helmetOptions));
 
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-  })
-);
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+//   })
+// );
 
 app.use("/cold-well/v1", routes);
 app.use('/uploads', express.static(path.join(__basedir, 'uploads')));
