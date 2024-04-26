@@ -11,7 +11,7 @@ let logger = require("morgan");
 
 const cookieParser = require("cookie-parser");
 const path =require("path");
-const { errorHandler } = require("../utils/errorHandler");
+
 const {
   corsOptions,
   mongoSanitizeOptions,
@@ -52,6 +52,5 @@ app.use('/uploads', express.static(path.join(__basedir, 'uploads')));
 app.use("*", (req, res) => {
   return res.recordNotFound("Route");
 });
-app.use(errorHandler);
 
 module.exports = app;
