@@ -18,7 +18,7 @@ const {
   helmetOptions,
   rateLimitOptions,
 } = require("./options");
-global.__basedir = path.resolve(__dirname, '../');
+global.__basedir = path.resolve(__dirname, '.');
 const session = require("express-session");
 //template engine
 
